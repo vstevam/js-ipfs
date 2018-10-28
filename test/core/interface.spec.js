@@ -110,7 +110,8 @@ describe('interface-ipfs-core tests', () => {
     ]
   })
 
-  tests.filesMFS(defaultCommonFactory)
+  // TODO needs MFS module to be updated
+  // tests.filesMFS(defaultCommonFactory)
 
   tests.key(CommonFactory.create({
     spawnOptions: {
@@ -118,8 +119,6 @@ describe('interface-ipfs-core tests', () => {
       initOptions: { bits: 512 }
     }
   }))
-
-  tests.ls(defaultCommonFactory)
 
   tests.miscellaneous(CommonFactory.create({
     // No need to stop, because the test suite does a 'stop' test.
