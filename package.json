@@ -60,7 +60,7 @@
   },
   "homepage": "https://github.com/ipfs/js-ipfs#readme",
   "devDependencies": {
-    "aegir": "^15.1.0",
+    "aegir": "^17.0.1",
     "chai": "^4.1.2",
     "delay": "^3.0.0",
     "detect-node": "^2.0.3",
