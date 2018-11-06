@@ -52,7 +52,15 @@ describe('interface-ipfs-core tests', () => {
     }
   })
 
-  tests.dht(dhtCommonFactory)
+  tests.dht(dhtCommonFactory, {
+    skip: isNode ? [
+      // dht.get
+      {
+        name: 'should get a value after it was put on another node',
+        reason: 'Needs https://github.com/ipfs/interface-ipfs-core/pull/383'
+      }
+    ] : true
+  })
 
   tests.files(defaultCommonFactory)
 

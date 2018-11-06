@@ -59,6 +59,7 @@ module.exports = (self) => {
         }
       }
 
+      console.log('buf 2', key, value)
       self._libp2pNode.dht.put(key, value, callback)
     }),
 
@@ -103,6 +104,7 @@ module.exports = (self) => {
      * @returns {Promise<Array<Multiaddr>>|void}
      */
     findpeer: promisify((peer, callback) => {
+      console.log('find peer core')
       if (typeof peer === 'string') {
         peer = PeerId.createFromB58String(peer)
       }
